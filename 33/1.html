@@ -7,6 +7,9 @@
 	<link rel="stylesheet" href="css/1.css" />
 	
 <body>
+	<div class="dzz">
+		
+	</div>
 	<div class="top">
 		<!--<ul class="top1">
 			<li>
@@ -24,6 +27,7 @@
 			</ul>
 		</a>-->
 	</div>
+	
 	<!--clock-->
 	<div class="clock">
 		
@@ -55,10 +59,24 @@
 //	适配
 	function size(originwidth){
     	var width=document.documentElement.clientWidth;
+//  	var height=document.documentElement.clientHeight;
+//  	if(width>height){
+//  		alert("请竖屏观看");
+//  	}
     	var bili=width/originwidth*100+"px";
     	$("html").css("font-size",bili);
     }
 	 size(750);
+	 
+//	 判断横竖屏的问题
+	window.addEventListener('orientationchange', function(event){
+//	    if ( window.orientation == 180 || window.orientation==0 ) {
+//	        alert("竖屏");
+//	    }
+	    if( window.orientation == 90 || window.orientation == -90 ) {
+	        alert("横屏");
+	    }
+	});
 	 
 	 
 //	 clock

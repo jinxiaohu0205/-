@@ -5,9 +5,28 @@
 	text-decoration: none;
 }
 html,body{
-	background: url(../img/11.jpg);
+	width: 100%;
+	height: 100%;
+	background: url(../img/1.png);
 	background-size:cover;
 	overflow: hidden;
+	background-position-y:-0.1rem ;
+	position: relative;
+}
+.dzz{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;top: 0;
+	background: url(../img/suolian.png);
+	background-size:contain;
+	animation:mymove 3s infinite alternate;
+}
+
+@keyframes mymove
+{
+from {background-position-y: -0.2rem;}
+to {background-position-y: 0.2rem;}
 }
 .top{
 	width: 100%;
@@ -80,6 +99,7 @@ a{
 }
 
 .btn{
+	position: relative;
 	width: 100%;
 	height: 0.81rem;
 	margin-top: -2rem;
