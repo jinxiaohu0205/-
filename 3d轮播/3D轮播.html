@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>3d轮播</title>
+	</head>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		.bigbox{
+			width: 800px;
+			height: 400px;
+			border: 1px solid red;
+			position: fixed;
+			left: 0;right: 0;top: 0;bottom: 0;
+			margin: auto;
+		}
+	</style>
+	<body>
+		<div class="bigbox">
+			
+		</div>
+	</body>
+	<script>
+		var arr=[];
+		var bigbox=document.querySelector(".bigbox");
+		var num=10;
+		var widths=800;
+		var heights=400;
+		for(var i=0;i<num;i++){
+			var scene=document.createElement("div");
+			scene.style.cssText="width: 100%;height:40px;perspective:122200px;";
+			var box=document.createElement("div");
+			box.style.cssText="width:"+widths+"px;height:"+(heights/num)+"px;transform-style:preserve-3d;position: relative;transition:transform 2s linear "+0.4*i+"s;transform-origin:center center 400px;"
+//			box.style.cssText="width:"+widths+"px;height:"+(heights/num)+"px;transform-style:preserve-3d;position:relative;transition:transform 2s linear "+0.2*i+"s;transform-origin:center center "+widths/2+"px";
+
+			
+			for(var j=0;j<6;j++){
+				var mian=document.createElement("div");
+				mian.style.cssText="position:absolute;backgroundPositionX:0;backgroundPositionY:0;"
+				if(j==0){
+//					后面的面
+//					mian.style.cssText="position:absolute;left:0;top:0;width:100%;height:100%;background:url(imgs/1.jpg);background-position-x: 0;background-position-y:"+(-heights/num*i)+"px;"
+    					mian.style.width="100%";
+                        mian.style.height="100%";
+                        mian.style.background="url(imgs/1.jpg) no-repeat";
+                        mian.style.backgroundPositionX=0;
+                        mian.style.backgroundPositionY=-(heights/num)*i+"px";
+				}else if(j==1){
+//					左侧的mian
+//					mian.style.cssText="position:absolute;left:0;top:0;width:100%;height:100%;transformOrigin:left;transform: rotateY(-90deg);background: url(imgs/2.jpg);background-position-x: 0;background-position-y:"+(-heights/num)*i+"px;"
+						mian.style.width="100%";
+                        mian.style.height="100%";
+                        mian.style.transformOrigin="left";
+                        mian.style.transform="rotateY(-90deg)";
+                        mian.style.background="url(imgs/2.jpg) no-repeat";
+                        mian.style.backgroundPositionX=0;
+                        mian.style.backgroundPositionY=-(heights/num)*i+"px";
+				}else if(j==2){
+//					右侧的面
+//					mian.style.cssText="position:absolute;left:0;top:0;width:100%;height:100%;transformOrigin:right;transform: rotateY(90deg);background: url(imgs/3.jpg);background-position-x: 0;background-position-y:"+(-heights/num*i)+"px;"
+						mian.style.width="100%";
+                        mian.style.height="100%";
+                        mian.style.transformOrigin="right";
+                        mian.style.transform="rotateY(90deg)";
+                        mian.style.background="url(imgs/2.jpg) no-repeat";
+                        mian.style.backgroundPositionX=0;
+                        mian.style.backgroundPositionY=-(heights/num)*i+"px";
+				}else if(j==3){
+//					前面的面
+//					mian.style.cssText="position:absolute;left:0;top:0;width:100%;height:100%;transform:translateZ(800px);background:url(imgs/4.jpg);background-position-x:0;background-position-y:"+(-heights/num*i)+"px;"					 
+						mian.style.width="100%";
+                        mian.style.height="100%";
+                        mian.style.background="url(imgs/4.jpg) no-repeat";
+                        mian.style.transform="translateZ("+widths+"px)";
+                        mian.style.backgroundPositionX=0;
+                        mian.style.backgroundPositionY=-(heights/num)*i+"px";
+				}else if(j==4){
+//					上面的面
+					mian.style.cssText="position:absolute;left:0;top:0;width:100%;height:800px;transformOrigin:right;transform: rotateX(-90deg);"
+				}else if(j==5){
+//					下面的面
+					mian.style.cssText="position:absolute;left:0;top:0;width:100%;height:800px;transformOrigin:right;transform: rotateX(90deg);"
+				}
+				box.appendChild(mian);
+			}
+			scene.appendChild(box);
+			bigbox.appendChild(scene);
+			arr.push(box);
+		}
+		    var a=0;
+            var b=90;
+            setInterval(function(){
+                a+=b;
+                for(var i=0;i<arr.length;i++){
+                    arr[i].style.transform="rotateY("+a+"deg)";
+                }
+            },6000)
+           
+	</script>
+</html>
