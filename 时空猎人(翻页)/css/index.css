@@ -1,0 +1,225 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.slide {position:relative; width:100%; height:100%;overflow: hidden;}
+.slide .content{width: 100%;height: 100%;margin: 0 auto;}
+.slide .content li{width: 100%;height:100%;overflow: hidden;-webkit-background-size: cover;background-size: cover;line-height: 400px;text-align: center;}
+.slide .content li:nth-child(1){background-image:url(../img/bj11.jpg);}
+.slide .content li:nth-child(2){background-image:url(../img/bj2.jpg);}
+.slide .content li:nth-child(3){background-image:url(../img/bj3.jpg);}
+.slide .content li:nth-child(4){background-image:url(../img/bj4.jpg);}
+.slide .content li:nth-child(5){background-image:url(../img/bj5.jpg);}
+
+
+.sjz{
+	width:100% ;
+	height: 1.23rem;
+	/*background: blue;*/
+	position: fixed;
+	top: 6.06rem;
+	box-sizing:border-box;
+	padding: 0 0.2rem;
+}
+.sjz .uul{
+	width: 100%;
+	height: 33%;
+	margin-top: 0.25rem;
+}
+.sjz .uul div{
+	width: 20%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	line-height: 100%;
+	font-size: 0.22rem;
+	color: #b69f9d;
+}
+.ht{
+	width: 100%;
+	height: 0.27rem;
+	background: url(../img/sjz1.jpg);
+	background-size:contain;
+}
+.text3{
+	width: 100%;
+	height: 30%;
+}
+.text3 div{
+	width: 20%;
+	height: 100%;
+	font-size:0.2rem ;
+	text-align: center;
+	line-height: 0.4rem;
+	float: left;
+	font-weight: bold;
+	color: #ffffff;
+}
+.text3 div:nth-child(1){
+	/*background: url(../img/red2.jpg);*/
+	/*color: #d48321;*/
+	background-size:contain ;
+	
+}
+.gw{
+	display: block;
+	width: 1.86rem;
+	height: 0.43rem;
+	position: fixed;
+	left: 0.2rem;top: 0;
+	background: url(../img/guanwang.png);
+	background-size:cover ;
+}
+.anniu{
+	width: 100%;
+	height: 1.34rem;
+	display: block;
+	position: fixed;
+	left: 0;bottom: 0;
+	background: url(../img/anniu.png);
+	background-size:cover ;
+}
+.sp{
+	width: 1.82rem;
+	height: 0.92rem;
+	position: fixed;
+	left: 0.2rem;
+	top: 4.57rem;
+	background: url(../img/sp.jpg);
+	background-size:cover ;
+}
+.text1{
+	position: fixed;
+	width: 6rem;
+	height: 3.17rem;
+	left: 0.2rem;
+	top: 2.39rem;
+	background: url(../img/text1.jpg);
+	background-size:cover ;
+	z-index: 2;
+	display: none;
+}
+.cha{
+	width: 0.33rem;
+	height: 0.33rem;
+	position: absolute;
+	top: -0.33rem;
+	right: 0;
+	background: url(../img/cha.png);
+}
+
+.box1{
+	width: 5.95rem;
+	height: 1.4rem;
+	margin: 0 auto;
+	margin-top: 1.19rem;
+	border: 0.02rem solid #e8bc77;
+	background: url(../img/box1.jpg);
+	background-size:cover ;
+}
+.box2{
+	width: 5.99rem;
+	height: 4.51rem;
+	margin: 0 auto;
+	margin-top: 0.09rem;
+}
+.box2 div{
+	width: 2.88rem;
+	height: 1.41rem;
+	border: 0.02rem solid #E8BC77;
+	float: left;
+	margin-bottom: 0.1rem;
+}
+.box2 .left{
+	margin-left: 0.15rem;
+}
+.box2 .left{
+	margin-left: 0.15rem;
+}
+.box2 div:nth-child(1){
+	background: url(../img/box2.jpg);
+	background-size:cover ;
+}
+.box2 div:nth-child(2){
+	background: url(../img/box3.jpg);
+	background-size:cover ;
+}
+.box2 div:nth-child(3){
+	background: url(../img/box4.jpg);
+	background-size:cover ;
+}
+.box2 div:nth-child(4){
+	background: url(../img/box5.jpg);
+	background-size:cover ;
+}
+.box2 div:nth-child(5){
+	background: url(../img/box6.jpg);
+	background-size:cover ;
+}
+.box2 div:nth-child(6){
+	background: url(../img/box7.jpg);
+	background-size:cover ;
+}
+.zz{
+	position:fixed; 
+	width:100%; height:100%;
+	overflow: hidden;
+	left: 0;top: 0;
+	background:url(../img/zz.jpg) ;
+	background-size:cover ;
+	display: none;
+}
+.gw2{
+	display: block;
+	width: 1.86rem;
+	height: 0.43rem;
+	position: fixed;
+	background: url(../img/guanwang2.png);
+	background-size:cover ;
+	left: 0.2rem;top: 0;
+}
+.zz .ul{
+	width: 6rem;
+	height: 0.49rem;
+	/*background: blue;*/
+	margin: 1.1rem auto;
+}
+.zz .ul div{
+	float: left;
+	width: 0.49rem;
+	height: 0.49rem;
+	background: #e8bc77;
+	margin-right: 0.1rem;
+	text-align: center;
+	line-height: 0.49rem;
+	font-size: 0.22rem;
+	color: #4a0e06;
+}
+.text2{
+	width:2.5rem ;
+	height: 0.33rem;
+	margin:-0.2rem auto;
+	font-size:0.3rem ;
+	color: #e8bc77;
+	text-align: center;
+	line-height: 0.33rem;
+	/*background: blue;*/
+}
+.cha2{
+	width: 0.33rem;
+	height: 0.33rem;
+	position: absolute;
+	top: 0.13rem;
+	right: 0.13rem;
+	background: url(../img/cha.png);
+	background-size:cover ;
+}
+
+

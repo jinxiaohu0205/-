@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="css/looding.css" />
+</head>
+<body>
+	<div class="looding">
+		<img src="img/lodding.png" alt="" class="img"/>
+	</div>
+	<div class="test1"></div>
+	<p class="box"></p>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/motion.js"></script>
+<script src="js/public.js"></script>
+
+<script>
+	
+
+		var _self = $(".box");
+		new mo.Loader({
+//				'.test1' : 'http://ossweb-img.qq.com/upload/webplat/info/tgideas/201504/1428478083_1436653066_5040_imageAddr.jpg',
+				'.test1' : 'img/index2.jpg',
+				'img' : 'img/tree1.png'
+			},{
+			onLoading : function(count,total){
+				console.log('onloading:single loaded:',arguments)
+				_self.html('加载中...（'+count/total*100+'%）');
+			},
+			onComplete : function(time){
+				console.log('oncomplete:all source loaded:',arguments)
+				_self.html('加载完成,总共耗时:'+time+'ms');
+//				setTimeout(function(){
+//					_self.html('开始加载资源');
+//					lock = false
+//				},2000)
+			}
+		})
+
+	
+</script>
+</html>
